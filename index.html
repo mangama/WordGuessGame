@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Guessing Game</title>
+</head>
+<body>
+    <header>
+        <h1>Psychic Game</h1>
+    </header>
+
+    <div>
+        <h3>Guess what letter I'm thinking of: </h3>
+    </div>
+    <div>
+        <h3>Wins: <span id="winsCount"></span></h3>
+        <h3>Losses: <span id="lossesCount"></span></h3>
+        <h3>Guesses Left: <span id="remainingGuesses"></span></h3>
+        <h3>Your Gueses So Far: <span id="soFarGuess"></span></h3>
+    </div>
+
+    <script src="assets/javascript/game.js"></script>
+    
+</body>
+</html>
+
+
+<!-- Computer guesses a letter out of the 27 and stores it somewhere-->
+<!-- The user makes a guess and the guess is displayed-->
+<!-- totalNumberOfGuess=10 -->
+<!-- If userGuess=compChoice, we have a win, numOfWin++ and game resets-->
+<!-- If userGuess#compChoice, guessesRemaining--;and when guessesRemaining=0 user looses and numOfLosses++ and Game reset -->
+<!-- Game reset means guessRemaing =10 and computer selects a new letter, and the guesses so far goes back to an empty list -->
+
+<!--      
+Guess what letter I'm thinking of
+Wins: (# of times the user has guessed the letter correctly)
+Losses: (# of times the user has failed to guess the letter correctly after exhausting all guesses)
+Guesses Left: (# of guesses left. This will update)
+Your Guesses So Far: (the specific letters that the user typed. Display these until the user either wins or loses.)
+When the player wins, increase the Wins counter and start the game over again (without refreshing the page).   -->
