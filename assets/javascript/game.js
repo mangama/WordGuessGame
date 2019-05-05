@@ -64,7 +64,4 @@ startGame();
 // when guessesRemaining=0 user looses and numOfLosses++ and Game reset -->
 // <!-- Game reset means guessRemaing =10 and computer selects a new letter, and the guesses so far goes back to an empty list -->
 
-//Need to 
-// verify user input is:  a or b or c or d (in the alphabet)
-// do word guess game
-// review again the code above
+
