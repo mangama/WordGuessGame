@@ -1,5 +1,5 @@
 var userChoice = "";
-var totalNumOfGuess;
+var totalNumOfGuess=10;
 var wins = 0;
 var losses = 0;
 var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -34,7 +34,7 @@ document.onkeyup = function (event) {
     // totalNumOfGuess -= 1;
     guessesDisplay.textContent = userGuesses.join(", ");
     // console.log("compare:", userChoice, computerChoice);
-    if (userChoice === computerChoice) {
+    if (userChoice == computerChoice) {
         wins++;
         // console.log("if", userChoice, computerChoice);
         document.getElementById("winsCount").innerHTML = wins;
@@ -45,14 +45,16 @@ document.onkeyup = function (event) {
             losses++;
             document.getElementById("lossesCount").innerHTML = losses;
             startGame();
-        }
+        }     
     }
-
     document.getElementById("remainingGuesses").textContent = totalNumOfGuess;
 }
 
 document.getElementById("remainingGuesses").textContent = totalNumOfGuess;
 startGame();
+
+
+
 
 // <!-- Computer guesses a letter out of the 27 and stores it somewhere-->
 // <!-- The user makes a guess and the guess is displayed-->
@@ -62,7 +64,7 @@ startGame();
 // when guessesRemaining=0 user looses and numOfLosses++ and Game reset -->
 // <!-- Game reset means guessRemaing =10 and computer selects a new letter, and the guesses so far goes back to an empty list -->
 
-
-// verify user input is:  a or b or c or d (in the alphabet), regex
+//Need to 
+// verify user input is:  a or b or c or d (in the alphabet)
 // do word guess game
 // review again the code above
