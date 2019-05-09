@@ -27,6 +27,11 @@ function startGame() {
 
 document.onkeyup = function (event) {
     userChoice = event.key;
+
+    if (userGuesses.indexOf(userChoice)!==-1) {
+        return alert("You already guessed "+userChoice+". Please choose another letter.");
+        // I already guessed this letter
+    }
     // console.log("user:", userChoice);
     userGuesses.push(userChoice);
     totalNumOfGuess = totalNumOfGuess - 1;
@@ -34,6 +39,7 @@ document.onkeyup = function (event) {
     // totalNumOfGuess -= 1;
     guessesDisplay.textContent = userGuesses.join(", ");
     // console.log("compare:", userChoice, computerChoice);
+
     if (userChoice == computerChoice) {
         wins++;
         // console.log("if", userChoice, computerChoice);
